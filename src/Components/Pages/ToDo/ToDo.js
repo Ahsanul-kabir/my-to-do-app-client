@@ -1,13 +1,17 @@
 import React from 'react'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
 import './ToDo.css'
 
 function ToDo() {
+    const [user] = useAuthState(auth);
     const submitHandler = (e) => {
         e.preventDefault();
 
+        const email = user.email
         const taskName = e.target.taskName.value;
         const description = e.target.description.value
-        const todo = { taskName, description }
+        const todo = { email, taskName, description }
 
         // Send data to server
         fetch('https://whispering-basin-80515.herokuapp.com/todos', {
