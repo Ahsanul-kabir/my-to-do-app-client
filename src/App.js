@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import Home from "./Components/Pages/Home/Home";
 import Login from "./Components/Pages/Login/Login/Login";
 import Register from "./Components/Pages/Login/Register/Register";
 import RequireAuth from "./Components/Pages/Login/RequireAuth/RequireAuth";
@@ -11,6 +12,8 @@ function App() {
     <div>
       <Header />
       <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/todoapp" element={

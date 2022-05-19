@@ -10,7 +10,7 @@ function ToDo() {
         const todo = { taskName, description }
 
         // Send data to server
-        fetch('http://localhost:5000/todos', {
+        fetch('https://whispering-basin-80515.herokuapp.com/todos', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

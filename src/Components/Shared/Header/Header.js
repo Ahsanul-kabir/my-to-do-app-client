@@ -21,7 +21,7 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mx-auto">
-                            <NavLink as={Link} activeClassName="selected" to="/">Home</NavLink>
+                            <NavLink as={Link} activeClassName="selected" to="/home">Home</NavLink>
                             {
                                 user?.email ? <>
                                     <NavLink as={Link} activeClassName="selected" to="/todoapp">ToDo App</NavLink>

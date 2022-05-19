@@ -6,7 +6,7 @@ const MangeTask = () => {
     const [todos, setTodos] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/todos')
+        fetch('https://whispering-basin-80515.herokuapp.com/todos')
             .then(res => res.json())
             .then(data => setTodos(data))
 
@@ -17,7 +17,7 @@ const MangeTask = () => {
         if (proceed) {
             // console.log('deleting user with id, ', id);
 
-            const url = `http://localhost:5000/todos/${id}`
+            const url = `https://whispering-basin-80515.herokuapp.com/todos/${id}`
             fetch(url, {
                 method: 'DELETE',
             })
@@ -35,7 +35,7 @@ const MangeTask = () => {
     return (
         <div className="manage-order poppins-font" style={{ margin: '100px 0' }}>
             <Container className="py-5">
-                <Link to="/todoapp"><button className='btn btn-info w-25'>Add new Item</button></Link>
+                <Link to="/todoapp"><button className='btn btn-info w-25'>Add New Task</button></Link>
 
                 <h2 className="text-center pb-4 text-uppercase text-danger"> Manage Tasks</h2>
                 <Table striped bordered hover responsive>
