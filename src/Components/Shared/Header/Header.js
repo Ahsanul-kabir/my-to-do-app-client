@@ -25,6 +25,7 @@ const Header = () => {
                             {
                                 user?.email ? <>
                                     <NavLink as={Link} activeClassName="selected" to="/todoapp">ToDo App</NavLink>
+                                    <NavLink as={Link} activeClassName="selected" to="/managetask">Manage Task</NavLink>
                                 </> : ''
                             }
                         </Nav>

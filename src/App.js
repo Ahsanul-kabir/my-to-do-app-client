@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Login from "./Components/Pages/Login/Login/Login";
 import Register from "./Components/Pages/Login/Register/Register";
 import RequireAuth from "./Components/Pages/Login/RequireAuth/RequireAuth";
+import MangeTask from "./Components/Pages/MangeTask/MangeTask";
 import ToDo from "./Components/Pages/ToDo/ToDo";
 import Header from "./Components/Shared/Header/Header";
 
@@ -15,6 +16,12 @@ function App() {
         <Route path="/todoapp" element={
           <RequireAuth>
             <ToDo />
+          </RequireAuth>
+        }
+        />
+        <Route path="/managetask" element={
+          <RequireAuth>
+            <MangeTask />
           </RequireAuth>
         }
         />
